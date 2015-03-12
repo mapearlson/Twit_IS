@@ -28,5 +28,5 @@ myCorpus <- tm_map(myCorpus, removeURL)
 # add two extra stop words: "available" and "via"
 myStopwords <- c(stopwords('english'), "available", "via") > # remove "r" and "big" from stopwords
 myStopwords <- setdiff(myStopwords, c("r", "big"))
-> # remove stopwords from corpus
-  > myCorpus <- tm_map(myCorpus, removeWords, myStopwords)
+# remove stopwords from corpus
+myCorpus <- tm_map(myCorpus, removeWords, myStopwords)
